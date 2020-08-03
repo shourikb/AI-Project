@@ -1,0 +1,4 @@
+No. Time        Source          Destination Proto     Len
+1	0.000000	::	ff02::16	ICMPv6	90	Multicast Listener
+2	0.012086	::	ff02::16	ICMPv6	90	Multicast Listener
+3	0.051987	::	ff02::16	ICMPv6	90	Multicast Listener

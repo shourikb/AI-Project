@@ -1,0 +1,71 @@
+1	0.000000	::	ff02::16	ICMPv6	90	Multicast Listener Report Message v2
+2	0.012086	::	ff02::16	ICMPv6	90	Multicast Listener Report Message v2
+3	0.051987	::	ff02::16	ICMPv6	90	Multicast Listener Report Message v2
+4	0.055986	192.168.2.1	224.0.0.22	IGMPv3	54	Membership Report / Join group 224.0.0.251 for any sources
+5	0.149467	192.168.2.1	224.0.0.251	MDNS	87	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+6	0.285302	192.168.2.1	224.0.0.251	MDNS	324	Standard query 0x0000 ANY ishraq-thinkpad._udisks-ssh._tcp.local, "QM" question ANY ishraq-thinkpad.local, "QM" question ANY 1.2.168.192.in-addr.arpa, "QM" question ANY ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local, "QM" question A 192.168.2.1 PTR ishraq-thinkpad.local HINFO I686 LINUX SRV 0 0 9 ishraq-thinkpad.local TXT SRV 0 0 22 ishraq-thinkpad.local TXT
+7	0.329761	192.168.2.1	224.0.0.251	MDNS	220	Standard query response 0x0000 PTR _udisks-ssh._tcp.local PTR ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local PTR _workstation._tcp.local PTR ishraq-thinkpad._udisks-ssh._tcp.local
+8	0.516046	::	ff02::1:ffc1:2eae	ICMPv6	78	Neighbor Solicitation for fe80::221:ccff:fec1:2eae
+9	0.535618	192.168.2.1	224.0.0.251	MDNS	324	Standard query 0x0000 ANY ishraq-thinkpad._udisks-ssh._tcp.local, "QM" question ANY ishraq-thinkpad.local, "QM" question ANY 1.2.168.192.in-addr.arpa, "QM" question ANY ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local, "QM" question A 192.168.2.1 PTR ishraq-thinkpad.local HINFO I686 LINUX SRV 0 0 9 ishraq-thinkpad.local TXT SRV 0 0 22 ishraq-thinkpad.local TXT
+10	0.786601	192.168.2.1	224.0.0.251	MDNS	324	Standard query 0x0000 ANY ishraq-thinkpad._udisks-ssh._tcp.local, "QM" question ANY ishraq-thinkpad.local, "QM" question ANY 1.2.168.192.in-addr.arpa, "QM" question ANY ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local, "QM" question A 192.168.2.1 PTR ishraq-thinkpad.local HINFO I686 LINUX SRV 0 0 9 ishraq-thinkpad.local TXT SRV 0 0 22 ishraq-thinkpad.local TXT
+11	0.987737	192.168.2.1	224.0.0.251	MDNS	300	Standard query response 0x0000 TXT, cache flush A, cache flush 192.168.2.1 PTR, cache flush ishraq-thinkpad.local HINFO, cache flush I686 LINUX SRV, cache flush 0 0 9 ishraq-thinkpad.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+12	1.150588	192.168.2.1	224.0.0.251	MDNS	87	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+13	1.514728	192.168.2.1	224.0.0.251	MDNS	318	Standard query response 0x0000 PTR _udisks-ssh._tcp.local PTR ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local TXT, cache flush SRV, cache flush 0 0 9 ishraq-thinkpad.local A, cache flush 192.168.2.1 PTR _workstation._tcp.local PTR ishraq-thinkpad._udisks-ssh._tcp.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+14	1.516130	fe80::221:ccff:fec1:2eae	ff02::2	ICMPv6	70	Router Solicitation from 00:21:cc:c1:2e:ae
+15	1.523989	fe80::221:ccff:fec1:2eae	ff02::16	ICMPv6	110	Multicast Listener Report Message v2
+16	1.619683	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	107	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+17	1.755413	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	404	Standard query 0x0000 ANY ishraq-thinkpad._udisks-ssh._tcp.local, "QM" question ANY ishraq-thinkpad.local, "QM" question ANY e.a.e.2.1.c.e.f.f.f.c.c.1.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa, "QM" question ANY ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local, "QM" question AAAA fe80::221:ccff:fec1:2eae PTR ishraq-thinkpad.local HINFO I686 LINUX SRV 0 0 9 ishraq-thinkpad.local TXT SRV 0 0 22 ishraq-thinkpad.local TXT
+18	1.755475	192.168.2.1	224.0.0.251	MDNS	201	Standard query 0x0000 ANY e.a.e.2.1.c.e.f.f.f.c.c.1.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa, "QM" question ANY ishraq-thinkpad.local, "QM" question AAAA fe80::221:ccff:fec1:2eae PTR ishraq-thinkpad.local
+19	1.755625	192.168.2.1	224.0.0.251	MDNS	98	Standard query response 0x0000 HINFO, cache flush I686 LINUX
+20	1.799796	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	240	Standard query response 0x0000 PTR _udisks-ssh._tcp.local PTR ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local PTR _workstation._tcp.local PTR ishraq-thinkpad._udisks-ssh._tcp.local
+21	2.005690	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	404	Standard query 0x0000 ANY ishraq-thinkpad._udisks-ssh._tcp.local, "QM" question ANY ishraq-thinkpad.local, "QM" question ANY e.a.e.2.1.c.e.f.f.f.c.c.1.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa, "QM" question ANY ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local, "QM" question AAAA fe80::221:ccff:fec1:2eae PTR ishraq-thinkpad.local HINFO I686 LINUX SRV 0 0 9 ishraq-thinkpad.local TXT SRV 0 0 22 ishraq-thinkpad.local TXT
+22	2.005846	192.168.2.1	224.0.0.251	MDNS	201	Standard query 0x0000 ANY e.a.e.2.1.c.e.f.f.f.c.c.1.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa, "QM" question ANY ishraq-thinkpad.local, "QM" question AAAA fe80::221:ccff:fec1:2eae PTR ishraq-thinkpad.local
+23	2.173417	192.168.2.1	224.0.0.251	MDNS	277	Standard query response 0x0000 TXT, cache flush A, cache flush 192.168.2.1 PTR, cache flush ishraq-thinkpad.local SRV, cache flush 0 0 9 ishraq-thinkpad.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+24	2.256283	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	404	Standard query 0x0000 ANY ishraq-thinkpad._udisks-ssh._tcp.local, "QM" question ANY ishraq-thinkpad.local, "QM" question ANY e.a.e.2.1.c.e.f.f.f.c.c.1.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa, "QM" question ANY ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local, "QM" question AAAA fe80::221:ccff:fec1:2eae PTR ishraq-thinkpad.local HINFO I686 LINUX SRV 0 0 9 ishraq-thinkpad.local TXT SRV 0 0 22 ishraq-thinkpad.local TXT
+25	2.256434	192.168.2.1	224.0.0.251	MDNS	201	Standard query 0x0000 ANY e.a.e.2.1.c.e.f.f.f.c.c.1.2.2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa, "QM" question ANY ishraq-thinkpad.local, "QM" question AAAA fe80::221:ccff:fec1:2eae PTR ishraq-thinkpad.local
+26	2.256802	192.168.2.1	224.0.0.251	MDNS	98	Standard query response 0x0000 HINFO, cache flush I686 LINUX
+27	2.456874	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	380	Standard query response 0x0000 TXT, cache flush AAAA, cache flush fe80::221:ccff:fec1:2eae PTR, cache flush ishraq-thinkpad.local HINFO, cache flush I686 LINUX SRV, cache flush 0 0 9 ishraq-thinkpad.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+28	2.457019	192.168.2.1	224.0.0.251	MDNS	189	Standard query response 0x0000 PTR, cache flush ishraq-thinkpad.local AAAA, cache flush fe80::221:ccff:fec1:2eae
+29	2.620951	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	107	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+30	2.985292	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	350	Standard query response 0x0000 PTR _udisks-ssh._tcp.local PTR ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local TXT, cache flush SRV, cache flush 0 0 9 ishraq-thinkpad.local AAAA, cache flush fe80::221:ccff:fec1:2eae PTR _workstation._tcp.local PTR ishraq-thinkpad._udisks-ssh._tcp.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+31	3.150873	192.168.2.1	224.0.0.251	MDNS	87	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+32	3.643168	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	380	Standard query response 0x0000 TXT, cache flush AAAA, cache flush fe80::221:ccff:fec1:2eae PTR, cache flush ishraq-thinkpad.local HINFO, cache flush I686 LINUX SRV, cache flush 0 0 9 ishraq-thinkpad.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+33	3.643545	192.168.2.1	224.0.0.251	MDNS	432	Standard query response 0x0000 PTR, cache flush ishraq-thinkpad.local AAAA, cache flush fe80::221:ccff:fec1:2eae PTR ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local TXT, cache flush SRV, cache flush 0 0 9 ishraq-thinkpad.local A, cache flush 192.168.2.1 PTR _workstation._tcp.local PTR ishraq-thinkpad._udisks-ssh._tcp.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local PTR _udisks-ssh._tcp.local
+34	4.359076	192.168.2.1	224.0.0.251	MDNS	328	Standard query response 0x0000 TXT, cache flush A, cache flush 192.168.2.1 PTR, cache flush ishraq-thinkpad.local HINFO, cache flush I686 LINUX SRV, cache flush 0 0 9 ishraq-thinkpad.local AAAA, cache flush fe80::221:ccff:fec1:2eae TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+35	4.621810	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	107	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+36	5.172113	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	350	Standard query response 0x0000 PTR _udisks-ssh._tcp.local PTR ishraq-thinkpad [00:21:cc:c1:2e:ae]._workstation._tcp.local TXT, cache flush SRV, cache flush 0 0 9 ishraq-thinkpad.local AAAA, cache flush fe80::221:ccff:fec1:2eae PTR _workstation._tcp.local PTR ishraq-thinkpad._udisks-ssh._tcp.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+37	5.520010	fe80::221:ccff:fec1:2eae	ff02::2	ICMPv6	70	Router Solicitation from 00:21:cc:c1:2e:ae
+38	5.776040	192.168.2.1	224.0.0.22	IGMPv3	54	Membership Report / Join group 224.0.0.251 for any sources
+39	5.829554	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	380	Standard query response 0x0000 TXT, cache flush AAAA, cache flush fe80::221:ccff:fec1:2eae PTR, cache flush ishraq-thinkpad.local HINFO, cache flush I686 LINUX SRV, cache flush 0 0 9 ishraq-thinkpad.local TXT, cache flush SRV, cache flush 0 0 22 ishraq-thinkpad.local
+40	5.829704	192.168.2.1	224.0.0.251	MDNS	189	Standard query response 0x0000 PTR, cache flush ishraq-thinkpad.local AAAA, cache flush fe80::221:ccff:fec1:2eae
+41	7.152581	192.168.2.1	224.0.0.251	MDNS	87	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+42	7.967992	fe80::221:ccff:fec1:2eae	ff02::16	ICMPv6	90	Multicast Listener Report Message v2
+43	8.622411	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	107	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+44	9.528013	fe80::221:ccff:fec1:2eae	ff02::2	ICMPv6	70	Router Solicitation from 00:21:cc:c1:2e:ae
+45	15.156490	192.168.2.1	224.0.0.251	MDNS	87	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+46	16.624422	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	107	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+47	20.205540	192.168.2.1	192.168.2.255	DB-LSP-DISC	177	Dropbox LAN sync Discovery Protocol
+48	31.159337	192.168.2.1	224.0.0.251	MDNS	87	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+49	32.626136	fe80::221:ccff:fec1:2eae	ff02::fb	MDNS	107	Standard query 0x0000 PTR _ipps._tcp.local, "QM" question PTR _ipp._tcp.local, "QM" question
+50	47.062692	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<20>
+51	47.062732	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<03>
+52	47.062757	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<00>
+53	47.062781	192.168.2.1	192.168.2.255	NBNS	110	Registration NB WORKGROUP<00>
+54	47.062803	192.168.2.1	192.168.2.255	NBNS	110	Registration NB WORKGROUP<1e>
+55	47.062881	192.168.2.1	192.168.2.255	BROWSER	284	Host Announcement ISHRAQ-THINKPAD, Workstation, Server, Print Queue Server, Xenix Server, NT Workstation, NT Server, Potential Browser, DFS server
+56	49.065453	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<20>
+57	49.065506	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<03>
+58	49.065539	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<00>
+59	49.065569	192.168.2.1	192.168.2.255	NBNS	110	Registration NB WORKGROUP<00>
+60	49.065583	192.168.2.1	192.168.2.255	NBNS	110	Registration NB WORKGROUP<1e>
+61	49.065643	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<20>
+62	49.065661	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<03>
+63	49.065676	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<00>
+64	49.065693	192.168.2.1	192.168.2.255	NBNS	110	Registration NB WORKGROUP<00>
+65	49.065707	192.168.2.1	192.168.2.255	NBNS	110	Registration NB WORKGROUP<1e>
+66	50.247768	192.168.2.1	192.168.2.255	DB-LSP-DISC	177	Dropbox LAN sync Discovery Protocol
+67	51.068080	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<20>
+68	51.068111	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<03>
+69	51.068126	192.168.2.1	192.168.2.255	NBNS	110	Registration NB ISHRAQ-THINKPAD<00>
+70	51.068138	192.168.2.1	192.168.2.255	NBNS	110	Registration NB WORKGROUP<00>
+71	51.068149	192.168.2.1	192.168.2.255	NBNS	110	Registration NB WORKGROUP<1e>

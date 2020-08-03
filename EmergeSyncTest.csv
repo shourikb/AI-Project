@@ -1,0 +1,21 @@
+No. Time        Source      Destination     Proto   Len Info                                Anomaly
+1	0.000000	192.168.1.2	134.68.220.74	RSYNC	78	Client Initialisation (Version 29)  1
+2	0.608103	134.68.220.74	192.168.1.2	RSYNC	78	Server Initialisation (Version 29)  1
+3	0.608301	192.168.1.2	134.68.220.74	RSYNC	81	Client Query                        1
+4	0.877034	134.68.220.74	192.168.1.2	RSYNC	459	Data                                1
+5	1.105127	134.68.220.74	192.168.1.2	RSYNC	78	Data                                1
+6	1.105364	192.168.1.2	134.68.220.74	RSYNC	75	Client Command                      1
+7	1.405124	192.168.1.2	134.68.220.74	RSYNC	152	Client Command                      0
+8	1.686968	134.68.220.74	192.168.1.2	RSYNC	70	Data                                0
+9	1.687170	192.168.1.2	134.68.220.74	RSYNC	70	Client Command                      1
+10	2.053037	192.168.1.2	134.68.220.74	RSYNC	109	Client Command                      1
+11	2.314153	134.68.220.74	192.168.1.2	RSYNC	102	Data                                0
+12	2.329107	192.168.1.2	134.68.220.74	RSYNC	92	Client Command                      1
+13	2.459537	134.68.220.74	192.168.1.2	RSYNC	149	Data                                1
+14	2.637712	134.68.220.74	192.168.1.2	RSYNC	74	Data                                1
+15	2.637888	192.168.1.2	134.68.220.74	RSYNC	74	Client Command                      0
+16	2.765539	134.68.220.74	192.168.1.2	RSYNC	74	Data                                1
+17	2.985553	134.68.220.74	192.168.1.2	RSYNC	98	Data                                1
+18	2.995040	192.168.1.2	134.68.220.74	RSYNC	70	Client Command                      0
+19	3.359694	192.168.1.2	134.68.220.74	RSYNC	78	Client Initialisation (Version 29)  0
+20	3.615561	134.68.220.74	192.168.1.2	RSYNC	78	Server Initialisation (Version 29)  1
