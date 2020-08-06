@@ -8,7 +8,6 @@ def convertIPAddress(ip, base=256):
     for i in range(length):
         added = float(list[length-i-1])*(base**i)
         toReturn += added
-        print(toReturn)
     return toReturn
 
 print(type(convertIPAddress(ip)))

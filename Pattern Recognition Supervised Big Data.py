@@ -1,61 +1,54 @@
 import tensorflow as tf
 from tensorflow import keras
-import numpy as np
 import pandas as pd
-import csv
 import os
-from StringToFloat import convertIPAddress
-from sklearn.model_selection import train_test_split
+import FileWriting
 
-'''
-with open("liteshadow4-packets/original/EmergeSync.cap", "rb") as f:
-    data = f.read()
-'''
-#csv = "MyCapTest.csv"
-#val_csv = "MyCapTest.csv"
+input_shape = 6
+batch_size = 256
+column_names = ["No.", "Time", "Source", "Destination", "Proto", "Len", "Anomaly"]
+#column_names = ["No.", "Time", "Source", "Destination", "Proto", "Anomaly"]
 
-train_dataset_url = "file:///C:/Users/Shourik/PycharmProjects/AI/EmergeSyncTest2.csv"
+class_names = ["anomaly", "normal"]
+
+#Reads the file
+FileWriting.writeCSV(file="EmergeSync.csv", anom_percent=50)
+
+train_dataset_url = "file:///C:/Users/Shourik/PycharmProjects/AI/New.csv"
 
 train_dataset_fp = tf.keras.utils.get_file(fname=os.path.basename(train_dataset_url),
                                            origin=train_dataset_url)
 
-test_dataset_url = "file:///C:/Users/Shourik/PycharmProjects/AI/EmergeSyncTestDataset2.csv"
+test_dataset_url = "file:///C:/Users/Shourik/PycharmProjects/AI/New.csv"
 
 test_dataset_fp = tf.keras.utils.get_file(fname=os.path.basename(test_dataset_url),
                                            origin=test_dataset_url)
 
 print("Local copy of the dataset file: {}".format(train_dataset_fp))
 
-#column_names = ["No.", "Time", "Source", "Destination", "Proto", "Len", "Info", "Anomaly"]
-column_names = ["No.", "Time", "Source", "Destination", "Proto", "Anomaly"]
 
-class_names = ["anomaly", "normal"]
-
-
-
-batch_size = 1
-
-#dataframe = pd.read_csv(csv)
-
+# Prints the current dataset
 print("Train Dataset FP: ")
-print(pd.read_csv(train_dataset_fp))
+print(pd.read_csv(train_dataset_fp, error_bad_lines=False))
 
+# Column names split into two seperate lists
 feature_names = column_names[:-1]
 label_name = column_names[-1]
 
+# Building the actual dataset
 train_dataset = tf.data.experimental.make_csv_dataset(
     train_dataset_fp,
     batch_size=batch_size,
     column_names=column_names,
     label_name=label_name,
-    field_delim=',',
-    num_epochs=1)
+    num_epochs=10)
 
 print(train_dataset)
 
 features, labels = next(iter(train_dataset))
 
 print(features)
+
 
 def pack_features_vector(features, labels):
   """Pack the features into a single array."""
@@ -69,8 +62,9 @@ features, labels = next(iter(train_dataset))
 print("Features")
 print(features[:5])
 
+# Building the actual model
 model = tf.keras.Sequential([
-  tf.keras.layers.Dense(10, activation=tf.nn.relu, input_shape=(5,)),  # input shape required
+  tf.keras.layers.Dense(128, activation=tf.nn.relu, input_shape=(input_shape,)),  # input shape required
   tf.keras.layers.Dense(10, activation=tf.nn.relu),
   tf.keras.layers.Dense(2)
 ])
@@ -81,6 +75,7 @@ print(predictions[:5])
 
 tf.nn.softmax(predictions[:5])
 
+# Original predictions (pre-training)
 print("Prediction: {}".format(tf.argmax(predictions, axis=1)))
 print("    Labels: {}".format(labels))
 
@@ -173,15 +168,27 @@ print("Test set accuracy: {:.3%}".format(test_accuracy.result()))
 
 print(tf.stack([y,prediction],axis=1))
 
+
 predict_dataset = tf.convert_to_tensor([
-    [5.1, 3.3, 1.7, 0.5, 0.1],
-    [5.9, 3.0, 4.2, 1.5, 0.2],
-    [6.9, 3.1, 5.4, 2.1, 0.3]
+    [8.0, 3.334445, 3543885590.0, 2436848848.0, 0.1, 1514.0],
+    [154.0, 9.838373737, 0.126636637, 1223647271.0, 0.5, 6.43231],
+    [2345.0, 3.4443134, 1254928462.0, 3574839182.0, 0.2, 1514.0],
+    [3678.0, 5.347449797586101, 2252659786.0, 3232235778.0, 0.1, 3.5483846258631906]
 ])
+
+'''
+writeCSV(file="EmergeSync.csv")
+lol = FileWriting.readFileToList("New2.csv")
+print("List of lists = ")
+print(lol)
+predict_dataset = tf.convert_to_tensor(lol)
+'''
 
 # training=False is needed only if there are layers with different
 # behavior during training versus inference (e.g. Dropout).
 predictions = model(predict_dataset, training=False)
+
+
 
 for i, logits in enumerate(predictions):
   class_idx = tf.argmax(logits).numpy()
@@ -190,6 +197,8 @@ for i, logits in enumerate(predictions):
   print("Example {} prediction: {} ({:4.1f}%)".format(i, name, 100*p))
 
 '''
+# Unsupervised Learning: Not Working
+
 train, test_ds = train_test_split(dataframe, train_size=0.8, test_size=0.2)
 train_ds, val_ds = train_test_split(train, train_size=0.8, test_size=0.2)
 
@@ -211,7 +220,7 @@ test_ds = df_to_dataset(test_ds, shuffle=False, batch_size=batch_size)
 val_ds = df_to_dataset(test_ds, shuffle=False, batch_size=batch_size)
 
 print(train_dataset)
-'''
+
 
 
 #print("Features: {}".format(feature_names))
@@ -224,6 +233,7 @@ print(train_dataset)
 #model = keras.Sequential([keras.layers.Dense(units=7, activation="linear", input_dim=2),
 #                         keras.layers.Dense(7, activation="linear"),
 #                         keras.layers.Dense(7, activation="linear")])
+'''
 '''
 model = keras.Sequential()
 
