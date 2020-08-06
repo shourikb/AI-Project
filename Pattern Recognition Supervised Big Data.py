@@ -4,15 +4,18 @@ import pandas as pd
 import os
 import FileWriting
 
+# Input shape is the number of columns minus the label
 input_shape = 6
-batch_size = 256
+
+# Batch size is fine tuned for best accuracy
+batch_size = 64
+
 column_names = ["No.", "Time", "Source", "Destination", "Proto", "Len", "Anomaly"]
-#column_names = ["No.", "Time", "Source", "Destination", "Proto", "Anomaly"]
 
 class_names = ["anomaly", "normal"]
 
-#Reads the file
-FileWriting.writeCSV(file="EmergeSync.csv", anom_percent=50)
+# Loads the training and testing data
+FileWriting.writeCSV(file="EmergeSync.csv", name="New", anom_percent=50)
 
 train_dataset_url = "file:///C:/Users/Shourik/PycharmProjects/AI/New.csv"
 
@@ -24,14 +27,14 @@ test_dataset_url = "file:///C:/Users/Shourik/PycharmProjects/AI/New.csv"
 test_dataset_fp = tf.keras.utils.get_file(fname=os.path.basename(test_dataset_url),
                                            origin=test_dataset_url)
 
-print("Local copy of the dataset file: {}".format(train_dataset_fp))
+# print("Local copy of the dataset file: {}".format(train_dataset_fp))
 
 
 # Prints the current dataset
-print("Train Dataset FP: ")
-print(pd.read_csv(train_dataset_fp, error_bad_lines=False))
+# print("Train Dataset FP: ")
+# print(pd.read_csv(train_dataset_fp, error_bad_lines=False))
 
-# Column names split into two seperate lists
+# Column names split into two separate lists
 feature_names = column_names[:-1]
 label_name = column_names[-1]
 
@@ -41,13 +44,14 @@ train_dataset = tf.data.experimental.make_csv_dataset(
     batch_size=batch_size,
     column_names=column_names,
     label_name=label_name,
-    num_epochs=10)
+    num_epochs=1)
 
-print(train_dataset)
+#print(train_dataset)
 
+# Features is the name of the column, Labels is whether it's an anomaly or normal
 features, labels = next(iter(train_dataset))
 
-print(features)
+#print(features)
 
 
 def pack_features_vector(features, labels):
@@ -59,8 +63,8 @@ train_dataset = train_dataset.map(pack_features_vector)
 
 features, labels = next(iter(train_dataset))
 
-print("Features")
-print(features[:5])
+#print("Features")
+#print(features[:5])
 
 # Building the actual model
 model = tf.keras.Sequential([
@@ -69,9 +73,10 @@ model = tf.keras.Sequential([
   tf.keras.layers.Dense(2)
 ])
 
+# Early predictions
 predictions = model(features)
-print("Predictions")
-print(predictions[:5])
+#print("Predictions")
+#print(predictions[:5])
 
 tf.nn.softmax(predictions[:5])
 
@@ -116,6 +121,7 @@ print("Step: {},         Loss: {}".format(optimizer.iterations.numpy(),
 train_loss_results = []
 train_accuracy_results = []
 
+# Number of times it goes through the training loop
 num_epochs = 11
 
 for epoch in range(num_epochs):
@@ -168,28 +174,29 @@ print("Test set accuracy: {:.3%}".format(test_accuracy.result()))
 
 print(tf.stack([y,prediction],axis=1))
 
-
+'''
 predict_dataset = tf.convert_to_tensor([
     [8.0, 3.334445, 3543885590.0, 2436848848.0, 0.1, 1514.0],
     [154.0, 9.838373737, 0.126636637, 1223647271.0, 0.5, 6.43231],
     [2345.0, 3.4443134, 1254928462.0, 3574839182.0, 0.2, 1514.0],
     [3678.0, 5.347449797586101, 2252659786.0, 3232235778.0, 0.1, 3.5483846258631906]
 ])
+'''
 
-'''
-writeCSV(file="EmergeSync.csv")
-lol = FileWriting.readFileToList("New2.csv")
-print("List of lists = ")
-print(lol)
+# Converts the predict dataset to floats
+FileWriting.writeCSV(file="MyCap.csv", name="Predict")
+lol = FileWriting.readFileToList("Predict.csv")
+#print("List of lists = ")
+#print(lol)
 predict_dataset = tf.convert_to_tensor(lol)
-'''
+
 
 # training=False is needed only if there are layers with different
 # behavior during training versus inference (e.g. Dropout).
 predictions = model(predict_dataset, training=False)
 
 
-
+# Prints the predictions if a packet is normal or anomalous
 for i, logits in enumerate(predictions):
   class_idx = tf.argmax(logits).numpy()
   p = tf.nn.softmax(logits)[class_idx]

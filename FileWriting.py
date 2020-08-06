@@ -3,13 +3,13 @@ from StringToFloat import convertIPAddress
 import random
 
 
-def writeCSV(file, columns=7, anom_percent=66):
-    proto_dict = {"RSYNC": "0.1", "TCP": "0.2", "UDP": "0.3", "ICMP": "0.4"}
+def writeCSV(file, name, columns=7, anom_percent=66):
+    proto_dict = {"RSYNC": "0.1", "TCP": "0.2", "IGMPv6": "0.3", "IGMPv3": "0.4"}
     with open(file, "r") as reader:
         #print(row_count)
         #print(reader.readline())
-        f = open("C://Users/Shourik/PycharmProjects/AI/New.csv", "w")
-        f.write("2" + str(columns) + ", anomaly, normal" + "\n")
+        f = open("C://Users/Shourik/PycharmProjects/AI/" + name + ".csv", "w")
+        f.write("2," + str(columns) + ", anomaly, normal" + "\n")
         line = reader.readline()
         line = reader.readline()
         while line:
@@ -74,9 +74,11 @@ def writeCSV(file, columns=7, anom_percent=66):
 def readFileToList(file):
     toReturn = []
     with open(file, "r") as reader:
+        reader.readline()
         line = reader.readline()
         content_list = line.split(",")
         while line:
+            content_list.remove(content_list[len(content_list)-1])
             for i in range(len(content_list)):
                 content_list[i] = float(content_list[i])
             toReturn.append(content_list)
@@ -85,4 +87,4 @@ def readFileToList(file):
     return toReturn
 
 
-print(readFileToList("New2.csv"))
+print(readFileToList("Predict.csv"))
